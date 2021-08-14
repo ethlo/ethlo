@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ethlo - Morten Haraldsen</title>
+    <style>
+        html, body {
+            font-family: 'Roboto Light', sans-serif;
+            font-size: 1.01em;
+            line-height: 1.5em;
+            background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.3) 100%), url(img/poppies.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center center;
+        }
+
+        body {
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #logo {
+            zoom: 0.32;
+        }
+
+        #svgg {
+            #filter: drop-shadow(0em 0em 1em rgba(200, 0, 80, .99));
+        }
+
+        #header {
+            padding-top: 1em;
+            padding-left: 1em;
+        }
+
+        #wrapper {
+            background: #080808;
+            opacity: 0.9;
+            margin-left: auto;
+            margin-right: auto;
+            width: 60em;
+        }
+
+        #content {
+            padding-left: 1em;
+            padding-right: 1em;
+            color: #fff;
+            margin-top: 1em;
+        }
+
+        #menu {
+            float: right;
+            padding: 1em 1em;
+        }
+
+        .block {
+            filter: drop-shadow(0.4em 0.4em 0.1em rgba(0, 0, 0, .7));
+            border-radius: 0.4em;
+            background: #161616;
+            padding: 1.6em 1.6em;
+            color: #ccc;
+            opacity: 100%;
+        }
+
+        #footer {
+            background: black;
+            color: #555;
+            padding: 1.5em;
+            text-align: center;
+            margin-top: auto;
+        }
+
+        #youtube {
+            height: 1.2em;
+        }
+
+        #github {
+            height: 1.2em;
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+<div id="wrapper">
+    <div id="header">
+        <svg id="logo" xmlns="http://www.w3.org/2000/svg" width="400" height="218.88888888888889"
+             viewBox="0, 0, 400,218.88888888888889">
+            <g id="svgg">
+                <path id="path0"
+                      d="M48.278 32.674 C 43.811 34.620,39.137 40.295,38.329 44.755 C 36.284 56.033,38.334 175.395,40.624 178.462 C 46.121 185.822,47.066 186.079,70.078 186.456 L 91.111 186.801 91.111 178.956 L 91.111 171.111 72.222 171.111 L 53.333 171.111 53.333 140.000 L 53.333 108.889 68.333 108.889 L 83.333 108.889 83.333 101.111 L 83.333 93.333 68.333 93.333 L 53.333 93.333 53.333 70.000 L 53.333 46.667 72.222 46.667 L 91.111 46.667 91.111 38.889 L 91.111 31.111 71.389 31.155 C 57.517 31.185,50.662 31.636,48.278 32.674 M105.556 38.889 L 105.556 46.667 116.667 46.667 L 127.778 46.667 127.778 116.667 L 127.778 186.667 135.000 186.667 L 142.222 186.667 142.222 116.667 L 142.222 46.667 153.333 46.667 L 164.444 46.667 164.444 38.889 L 164.444 31.111 135.000 31.111 L 105.556 31.111 105.556 38.889 M178.889 108.889 L 178.889 186.667 186.667 186.667 L 194.444 186.667 194.444 147.778 L 194.444 108.889 206.111 108.889 L 217.778 108.889 217.778 101.111 L 217.778 93.333 206.111 93.333 L 194.444 93.333 194.444 62.222 L 194.444 31.111 186.667 31.111 L 178.889 31.111 178.889 108.889 M228.889 108.889 L 228.889 186.667 256.667 186.667 L 284.444 186.667 284.444 178.889 L 284.444 171.111 264.444 171.111 L 244.444 171.111 244.444 101.111 L 244.444 31.111 236.667 31.111 L 228.889 31.111 228.889 108.889 M310.500 32.636 C 299.665 37.476,299.839 36.131,300.229 111.864 C 300.593 182.628,300.050 177.731,308.206 183.820 C 312.888 187.316,349.334 187.316,354.017 183.820 C 362.216 177.698,361.667 183.080,361.667 108.889 C 361.667 34.701,362.216 40.084,354.021 33.958 C 350.089 31.019,316.411 29.996,310.500 32.636 M346.667 108.889 L 346.667 171.111 331.111 171.111 L 315.556 171.111 315.556 108.889 L 315.556 46.667 331.111 46.667 L 346.667 46.667 346.667 108.889 "
+                      stroke="none" fill="#dadada"></path>
+            </g>
+        </svg>
+
+        <div id="menu">
+            <a href="https://www.youtube.com/channel/UCxhi3ZkJ8SdAMvSj_XSAKpA">
+                <svg id="youtube" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 210 110">
+                    <path d="M154.3 17.5a19.6 19.6 0 0 0-13.8-13.8C128.4.4 79.7.4 79.7.4S31 .5 18.9 3.8A19.6 19.6 0 0 0 5.1 17.6C1.44 39.1.02 71.86 5.2 92.5A19.6 19.6 0 0 0 19 106.3c12.1 3.3 60.8 3.3 60.8 3.3s48.7 0 60.8-3.3a19.6 19.6 0 0 0 13.8-13.8c3.86-21.53 5.05-54.27-.1-75z"
+                          fill="red"/>
+                    <path fill="#fff" d="M64.2 78.4L104.6 55 64.2 31.6z"/>
+                </svg>
+            </a>
+
+            <a href="https://github.com/ethlo">
+                <svg id="github" aria-hidden="true" viewBox="0 0 16 16" width="32"
+                     data-view-component="true"
+                     class="octicon octicon-mark-github v-align-middle">
+                    <path fill-rule="evenodd"
+                          d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"
+                          fill="#fff"></path>
+                </svg>
+            </a>
+        </div>
+    </div>
+
+    <div id="content">
+        <p class="block">
+            <img src="https://i.ytimg.com/vi/bB-KzqKxM00/hqdefault.jpg" alt=""
+                 style="float:left; width:36%; padding-right:2em;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque congue malesuada
+            est, non
+            fermentum nulla pretium ut. Integer dignissim molestie augue, quis dictum tortor gravida vel. In
+            ultricies
+            nunc et nibh ultricies efficitur. Sed convallis cursus ligula ac dignissim. Nullam ut nisi non nisl
+            auctor
+            malesuada in quis lectus. Vivamus lobortis risus sit amet eleifend hendrerit. Praesent interdum maximus
+            lacus, ac dapibus massa consectetur quis. Vivamus eu blandit metus. Vestibulum euismod mollis interdum.
+            Sed
+            facilisis enim ac massa fermentum egestas a nec massa. Donec ac metus pretium, malesuada dolor vitae,
+            bibendum lectus. Nulla at ex vel neque dignissim pulvinar. Sed vitae tellus imperdiet, congue felis et,
+            maximus sapien. Curabitur pretium consequat ligula a viverra. Integer ut justo condimentum justo
+            ullamcorper
+            porttitor sit amet eget est.
+        </p>
+
+        <p class="block">Pellentesque varius magna quis nibh eleifend, vitae sollicitudin mauris cursus. Vestibulum
+            tincidunt tortor
+            ullamcorper faucibus rutrum. Integer venenatis ante odio, quis volutpat quam posuere vitae. Etiam quis leo
+            nunc. Curabitur semper, nibh eu malesuada varius, elit nulla efficitur felis, non dapibus nunc dolor id
+            ligula. Cras nec varius sapien, fringilla consectetur lorem. Proin vel euismod mauris. Quisque ultrices
+            fermentum nulla, vel blandit sem. Donec malesuada quam lectus, ac rhoncus ipsum tincidunt non. Duis
+            malesuada neque ipsum, sed cursus velit fringilla in. Aliquam erat volutpat. In eu massa elit.</p>
+
+        <p class="block">Nam ut mi vulputate, posuere nunc quis, vestibulum augue. Orci varius natoque penatibus et
+            magnis dis
+            parturient montes, nascetur ridiculus mus. Donec dictum aliquam libero, at efficitur lacus lobortis id.
+            Morbi ullamcorper tincidunt facilisis. Donec et mollis sapien. Sed pharetra ipsum non ante vehicula, vitae
+            porta ex aliquet. Donec volutpat laoreet enim a egestas. Integer ac egestas turpis, laoreet scelerisque
+            nulla. Nullam non lectus consequat, consectetur justo vitae, semper sem. Etiam maximus aliquam neque, vel
+            venenatis felis interdum quis.</p>
+
+        <p class="block">Etiam convallis placerat libero eget porttitor. Sed volutpat lorem ac libero blandit ultricies.
+            Donec
+            pellentesque pulvinar urna, aliquet sagittis purus dapibus sed. Nam convallis quis tortor porta aliquet. Sed
+            dui dolor, ullamcorper in gravida ac, scelerisque sit amet lacus. Sed suscipit euismod magna et facilisis.
+            Donec venenatis, arcu ut molestie efficitur, nisl arcu convallis ipsum, eget porta nunc mi quis lectus. Duis
+            sagittis diam viverra, sodales sem sed, dignissim lacus. Cras viverra nibh sem, id imperdiet nisi mollis et.
+            Donec sit amet luctus dolor.</p>
+
+        <p class="block">Morbi non mollis mauris. Proin posuere lectus leo. Cras vel blandit odio. Pellentesque ornare
+            lobortis enim,
+            non aliquam risus consequat eget. Donec vehicula enim mi, pretium vehicula erat laoreet vel. Donec tristique
+            eleifend dui sit amet aliquam. Donec et nisi eget augue iaculis gravida. Mauris vitae augue tempus nunc
+            accumsan sodales. Maecenas feugiat eget est vitae mollis. Maecenas tincidunt eros lacus, vel auctor augue
+            iaculis euismod. Suspendisse non augue tellus. Class aptent taciti sociosqu ad litora torquent per conubia
+            nostra, per inceptos himenaeos.</p>
+
+    </div>
+</div>
+<div id="footer">
+    Copyright ethlo Morten Haraldsen &copy;2021
+</div>
+
+</body>
+</html>
