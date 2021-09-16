@@ -2,16 +2,19 @@
 error_reporting(E_ALL);
 
 require_once('jshrink_minifier.php');
-use \JShrink\Minifier as jsmin;
+
+use JShrink\Minifier as jsmin;
+
 // JavaScript Minifier
-function minify_js($input) {
-    //return $input;
+function minify_js($input)
+{
     return jsmin::minify($input);
 }
 
 // CSS Minifier => http://ideone.com/Q5USEF + improvement(s)
-function minify_css($input) {
-    if(trim($input) === "") return $input;
+function minify_css($input)
+{
+    if (trim($input) === "") return $input;
     return preg_replace(
         array(
             // Remove comment(s)
@@ -49,7 +52,7 @@ function minify_css($input) {
             '$1:0',
             '$1$2'
         ),
-    $input);
+        $input);
 }
 
 ?>
@@ -65,18 +68,22 @@ function minify_css($input) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css" integrity="sha512-usVBAd66/NpVNfBge19gws2j6JZinnca12rAe2l+d+QkLU9fiG02O1X8Q6hepIpr/EYKZvKx/I9WsnujJuOmBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css"
+          integrity="sha512-usVBAd66/NpVNfBge19gws2j6JZinnca12rAe2l+d+QkLU9fiG02O1X8Q6hepIpr/EYKZvKx/I9WsnujJuOmBA=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+          integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
 
     <style>
-    <?php output("\n\n/********************* SEPARATOR ***********************/\n\n", array(
-        'css/style.css',
-        'css/style-responsive.css',
-        'css/vertical-rhythm.min.css',
-        'css/magnific-popup.css',
-        'css/owl.carousel.css',
-        'css/animate.min.css',
-        'css/splitting.css'), 'minify_css'); ?>
+        <?php output("\n\n/********************* SEPARATOR ***********************/\n\n", array(
+            'css/style.css',
+            'css/style-responsive.css',
+            'css/vertical-rhythm.min.css',
+            'css/magnific-popup.css',
+            'css/owl.carousel.css',
+            'css/animate.min.css',
+            'css/splitting.css'), 'minify_css'); ?>
     </style>
 
     <!-- Favicons -->
@@ -199,14 +206,14 @@ function minify_css($input) {
                                 <div class="work-img">
                                     <div class="work-img-bg wow-p scalexIn"></div>
                                     <img src="https://i.ytimg.com/vi_webp/<?php echo $video['id']; ?>/maxresdefault.webp"
-					 srcset="https://i.ytimg.com/vi_webp/<?=$video['id']?>/maxresdefault.webp 1100w, https://img.youtube.com/vi/<?=$video['id']?>/hqdefault.jpg 480w, https://i.ytimg.com/vi/<?=$video['id']?>/mqdefault.jpg 320w"
- 					 sizes="(min-width: 1000px), 50vw, 100vw"
-                                         alt="<?=$video['title']?>" class="wow-p fadeIn" data-wow-delay=".2s"/>
+                                         srcset="https://i.ytimg.com/vi_webp/<?= $video['id'] ?>/maxresdefault.webp 1100w, https://img.youtube.com/vi/<?= $video['id'] ?>/hqdefault.jpg 480w, https://i.ytimg.com/vi/<?= $video['id'] ?>/mqdefault.jpg 320w"
+                                         sizes="(min-width: 1000px), 50vw, 100vw"
+                                         alt="<?= $video['title'] ?>" class="wow-p fadeIn" data-wow-delay=".2s"/>
                                 </div>
                                 <div class="work-intro">
-                                    <h3 class="work-title"><?=$video['title']?></h3>
+                                    <h3 class="work-title"><?= $video['title'] ?></h3>
                                     <div class="work-descr">
-                                        <?=$video['summary']?>
+                                        <?= $video['summary'] ?>
                                     </div>
                                 </div>
                             </a>
@@ -360,6 +367,7 @@ function output($delim, $files, $fn)
         echo $delim;
     }
 }
+
 ?>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
@@ -383,7 +391,9 @@ function output($delim, $files, $fn)
         integrity="sha512-x/Viuh5YndnrDISWqrZ6rerGnHccdLv/TW2B+xEGqubrLGCT6LdBGhnQxXo1Q4sXFgO12YeRWDYJkIV41OtOTA=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-viewport-checker/1.8.8/jquery.viewportchecker.min.js" integrity="sha512-FRX6MYITclzDyyMmSQLgZoZTfE+GLzAQpjs15adVZMY6AqhsrBLx8UZwp4FoqrrRFWY9TiaPwja7EY5fk309vw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-viewport-checker/1.8.8/jquery.viewportchecker.min.js"
+        integrity="sha512-FRX6MYITclzDyyMmSQLgZoZTfE+GLzAQpjs15adVZMY6AqhsrBLx8UZwp4FoqrrRFWY9TiaPwja7EY5fk309vw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-countto/1.2.0/jquery.countTo.min.js"
         integrity="sha512-RXuJVZbGztKGYMNgmWU6oOHbUwYu+NnzovhT4lyW1kfmEfRK6CD1xL8U+0xACFqSkC3cxMugaaNEP8wWmvl4Jw=="
@@ -405,18 +415,18 @@ function output($delim, $files, $fn)
 -->
 
 <script>
-<?php output("\n\n/********************* SEPARATOR ***********************/\n\n", array(
-'js/owl.carousel.min.js',
-'js/isotope.pkgd.min.js',
-'js/imagesloaded.pkgd.min.js',
-'js/jquery.magnific-popup.min.js',
-'js/masonry.pkgd.min.js',
-'js/jquery.lazyload.min.js',
-'js/wow.min.js',
-'js/morphext.js',
-'js/typed.min.js',
-'js/all.js',
-'js/splitting.min.js'), 'minify_js'); ?>
+    <?php output("\n\n", array(
+        'js/owl.carousel.min.js',
+        'js/isotope.pkgd.min.js',
+        'js/imagesloaded.pkgd.min.js',
+        'js/jquery.magnific-popup.min.js',
+        'js/masonry.pkgd.min.js',
+        'js/jquery.lazyload.min.js',
+        'js/wow.min.js',
+        'js/morphext.js',
+        'js/typed.min.js',
+        'js/all.js',
+        'js/splitting.min.js'), 'minify_js'); ?>
 </script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -432,5 +442,4 @@ function output($delim, $files, $fn)
 
 </body>
 </html>
-<!-- Last modified: <?= date('c')?> -->
-
+<!-- Last modified: <?= date('c') ?> -->
