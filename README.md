@@ -1,4 +1,5 @@
-### Hi there 👋
+### Hi there! 👋
+I hope you enjoy using the software provided. If you have questions or find a bug please feel free to open a ticket!
 
 <!--
 **ethlo/ethlo** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
