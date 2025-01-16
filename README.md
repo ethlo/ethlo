@@ -1,6 +1,7 @@
 ### Hi there! 👋
 I hope you enjoy using the software provided. If you have questions or find a bug please feel free to open a ticket!
 
+![GitHub stats](https://github-readme-stats.vercel.app/api?username=ethlo&theme=transparent&show=&show_icons=true&custom_title=ethlo's%20stats&rank_icon=percentile)
 <!--
 **ethlo/ethlo** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
